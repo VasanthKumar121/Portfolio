@@ -7,7 +7,7 @@
 <meta name="description" content="Freelance web design, web development, and graphic design portfolio.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,6 +15,7 @@
 <div class="grain"></div>
 <div class="glow glow-1"></div>
 <div class="glow glow-2"></div>
+<div class="glow glow-3"></div>
 
 <header class="topbar">
   <div class="nav-pill">
@@ -28,7 +29,8 @@
   </div>
 </header>
 
-<section class="hero">
+<section class="hero" id="hero-spotlight">
+  <div class="spotlight"></div>
   <div class="hero-half hero-design">
     <div class="grid-overlay"></div>
     <div class="swatch swatch-1"></div>
@@ -46,13 +48,20 @@
   </div>
 
   <div class="hero-content">
-    <p class="eyebrow">Freelance Designer &amp; Developer</p>
-    <h1>I design it.<br>I build it.<br><span class="gradient-text">It ships.</span></h1>
-    <p class="hero-sub">One person, two disciplines — no handoff between the mockup and the live site. What you approve is what your users touch.</p>
-    <div class="hero-actions">
-      <a href="#work" class="btn btn-primary">See the work</a>
-      <a href="#contact" class="btn btn-ghost">Start a project</a>
+    <div class="hero-glass">
+      <p class="eyebrow">Freelance Designer &amp; Developer</p>
+      <h1>I design it.<br>I build it.<br><span class="gradient-text">It ships.</span></h1>
+      <p class="hero-sub">One person, two disciplines — no handoff between the mockup and the live site. What you approve is what your users touch.</p>
+      <div class="hero-actions">
+        <a href="#work" class="btn btn-primary">See the work</a>
+        <a href="#contact" class="btn btn-ghost">Start a project</a>
+      </div>
     </div>
+  </div>
+
+  <div class="float-chip float-chip-1">
+    <span class="chip-num">05</span>
+    <span class="chip-label">Live projects shipped</span>
   </div>
 
   <div class="scroll-cue">
@@ -86,7 +95,7 @@
 
     <article class="project">
       <span class="project-index">01</span>
-      <div class="project-media">
+      <div class="project-media tilt-card">
         <img src="https://placehold.co/900x650/2A1810/E8D5B5?text=Ember+%26+Oak" alt="Ember and Oak restaurant site preview">
         <span class="media-tag">Web Design + Dev</span>
       </div>
@@ -104,7 +113,7 @@
 
     <article class="project reverse">
       <span class="project-index">02</span>
-      <div class="project-media">
+      <div class="project-media tilt-card">
         <img src="https://placehold.co/900x650/FAFAF9/4F46E5?text=Pulse" alt="Pulse SaaS landing page preview">
         <span class="media-tag">Web Design + Dev</span>
       </div>
@@ -122,7 +131,7 @@
 
     <article class="project">
       <span class="project-index">03</span>
-      <div class="project-media">
+      <div class="project-media tilt-card">
         <img src="https://placehold.co/900x650/FBF8F3/6B7A5E?text=Maya+Lindqvist" alt="Maya Lindqvist coaching site preview">
         <span class="media-tag">Web Design</span>
       </div>
@@ -140,7 +149,7 @@
 
     <article class="project reverse">
       <span class="project-index">04</span>
-      <div class="project-media">
+      <div class="project-media tilt-card">
         <img src="https://placehold.co/900x650/EFEFEA/1A1A1A?text=Fielder" alt="Fielder e-commerce product page preview">
         <span class="media-tag">Web Development</span>
       </div>
@@ -158,7 +167,7 @@
 
     <article class="project">
       <span class="project-index">05</span>
-      <div class="project-media">
+      <div class="project-media tilt-card">
         <img src="https://placehold.co/900x650/0B0C10/FF4D6D?text=Signal%2F26" alt="Signal 26 conference site preview">
         <span class="media-tag">Web Design + Dev</span>
       </div>
@@ -182,23 +191,23 @@
     <p class="eyebrow">How It Works</p>
     <h2>No agency.<br>No middleman. Just this.</h2>
   </div>
-  <div class="process-line">
-    <div class="process-step">
+  <div class="process-grid">
+    <div class="process-card">
       <span class="step-mono">01</span>
       <h4>You tell me the problem</h4>
       <p>Not "make it pretty" — what you're actually trying to fix or launch, and by when.</p>
     </div>
-    <div class="process-step">
+    <div class="process-card">
       <span class="step-mono">02</span>
       <h4>I design it</h4>
       <p>A real mockup, in your brand, that you can react to — not a mood board.</p>
     </div>
-    <div class="process-step">
+    <div class="process-card">
       <span class="step-mono">03</span>
       <h4>I build it</h4>
       <p>The approved design becomes a working site. No redesign at handoff, because there is no handoff.</p>
     </div>
-    <div class="process-step">
+    <div class="process-card">
       <span class="step-mono">04</span>
       <h4>You launch</h4>
       <p>Tested on mobile and desktop, fast to load, ready for real users.</p>
@@ -208,23 +217,20 @@
 
 <section class="contact" id="contact">
   <div class="contact-glow"></div>
-  <p class="eyebrow">Get In Touch</p>
-  <h2>Got a project in mind?<br>Let's talk about it.</h2>
-  <a href="mailto:deanvasanth12@gmail.com" class="btn btn-primary btn-large">deanvasanth12@gmail.com</a>
-  <div class="contact-methods">
-    <a href="tel:+919080552248" class="contact-method">
-      <span class="contact-method-label">Call</span>
-      <span class="contact-method-value">+91 90805 52248</span>
-    </a>
-    <a href="https://wa.me/919080552248" class="contact-method" target="_blank" rel="noopener">
-      <span class="contact-method-label">WhatsApp</span>
-      <span class="contact-method-value">+91 90805 52248</span>
-    </a>
-  </div>
-  <div class="contact-links">
-    <a href="#">GitHub</a>
-    <a href="#">LinkedIn</a>
-    <a href="#">Twitter / X</a>
+  <div class="contact-card">
+    <p class="eyebrow">Get In Touch</p>
+    <h2>Got a project in mind?<br>Let's talk about it.</h2>
+    <a href="mailto:deanvasanth12@gmail.com" class="btn btn-primary btn-large">deanvasanth12@gmail.com</a>
+    <div class="contact-methods">
+      <a href="tel:+919080552248" class="contact-method">
+        <span class="contact-method-label">Call</span>
+        <span class="contact-method-value">+91 90805 52248</span>
+      </a>
+      <a href="https://wa.me/919080552248" class="contact-method" target="_blank" rel="noopener">
+        <span class="contact-method-label">WhatsApp</span>
+        <span class="contact-method-value">+91 90805 52248</span>
+      </a>
+    </div>
   </div>
 </section>
 
