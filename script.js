@@ -1,4 +1,3 @@
-// Subtle reveal-on-scroll for project rows and process steps
 document.addEventListener('DOMContentLoaded', () => {
   const revealTargets = document.querySelectorAll('.project, .process-step');
 

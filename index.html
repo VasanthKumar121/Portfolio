@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Name — Design & Development</title>
+<title>Vasanth Kumar — Design & Development</title>
 <meta name="description" content="Freelance web design, web development, and graphic design portfolio.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,14 +13,19 @@
 <body>
 
 <div class="grain"></div>
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
 
 <header class="topbar">
-  <span class="mark">YN<span class="mark-dot">.</span></span>
-  <nav>
-    <a href="#work">Work</a>
-    <a href="#process">Process</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <div class="nav-pill">
+    <span class="mark">VK<span class="mark-dot">.</span></span>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="nav-cta">Let's talk</a>
+  </div>
 </header>
 
 <section class="hero">
@@ -42,115 +47,130 @@
 
   <div class="hero-content">
     <p class="eyebrow">Freelance Designer &amp; Developer</p>
-    <h1>I design it.<br>I build it.<br>It ships.</h1>
+    <h1>I design it.<br>I build it.<br><span class="gradient-text">It ships.</span></h1>
     <p class="hero-sub">One person, two disciplines — no handoff between the mockup and the live site. What you approve is what your users touch.</p>
     <div class="hero-actions">
       <a href="#work" class="btn btn-primary">See the work</a>
       <a href="#contact" class="btn btn-ghost">Start a project</a>
     </div>
   </div>
+
+  <div class="scroll-cue">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
 </section>
 
 <div class="ticker">
   <div class="ticker-track">
-    <span>sketching layout</span><span>—</span>
-    <span>writing components</span><span>—</span>
-    <span>shipping pixels</span><span>—</span>
-    <span>testing on mobile</span><span>—</span>
-    <span>fixing the one bug</span><span>—</span>
-    <span>sketching layout</span><span>—</span>
-    <span>writing components</span><span>—</span>
-    <span>shipping pixels</span><span>—</span>
-    <span>testing on mobile</span><span>—</span>
-    <span>fixing the one bug</span><span>—</span>
+    <span>sketching layout</span><span class="dot-sep">✦</span>
+    <span>writing components</span><span class="dot-sep">✦</span>
+    <span>shipping pixels</span><span class="dot-sep">✦</span>
+    <span>testing on mobile</span><span class="dot-sep">✦</span>
+    <span>fixing the one bug</span><span class="dot-sep">✦</span>
+    <span>sketching layout</span><span class="dot-sep">✦</span>
+    <span>writing components</span><span class="dot-sep">✦</span>
+    <span>shipping pixels</span><span class="dot-sep">✦</span>
+    <span>testing on mobile</span><span class="dot-sep">✦</span>
+    <span>fixing the one bug</span><span class="dot-sep">✦</span>
   </div>
 </div>
 
 <section class="work" id="work">
   <div class="section-head">
     <p class="eyebrow">Selected Work</p>
-    <h2>Five projects. Five different problems.</h2>
+    <h2>Five briefs.<br>Five different worlds.</h2>
   </div>
 
   <div class="project-list">
 
     <article class="project">
+      <span class="project-index">01</span>
       <div class="project-media">
-        <img src="https://placehold.co/900x650/14161A/F2EFE9?text=Project+One" alt="Project one preview">
+        <img src="https://placehold.co/900x650/2A1810/E8D5B5?text=Ember+%26+Oak" alt="Ember and Oak restaurant site preview">
+        <span class="media-tag">Web Design + Dev</span>
       </div>
       <div class="project-info">
-        <span class="project-tag">Web Design + Dev</span>
-        <h3>Project One — Client / Company Name</h3>
-        <p>Replace this with the real problem: what was broken or missing before you stepped in, and what you built to fix it. One or two sentences, written plainly.</p>
+        <h3>Ember &amp; Oak</h3>
+        <p class="project-sub">Restaurant landing page</p>
+        <p>A wood-fired restaurant needed a site as warm and deliberate as their kitchen. Built a single-page site with a hand-set menu, moody photography layout, and a direct reservation flow.</p>
         <ul class="project-meta">
-          <li>Role: Design &amp; front-end build</li>
-          <li>Stack: Figma, HTML/CSS, JavaScript</li>
+          <li>Design &amp; front-end build</li>
+          <li>HTML, CSS, JavaScript</li>
         </ul>
-        <a href="#" class="project-link">View live site →</a>
+        <a href="restaurant/" class="project-link">View live site <span class="arrow">→</span></a>
       </div>
     </article>
 
     <article class="project reverse">
+      <span class="project-index">02</span>
       <div class="project-media">
-        <img src="https://placehold.co/900x650/14161A/F2EFE9?text=Project+Two" alt="Project two preview">
+        <img src="https://placehold.co/900x650/FAFAF9/4F46E5?text=Pulse" alt="Pulse SaaS landing page preview">
+        <span class="media-tag">Web Design + Dev</span>
       </div>
       <div class="project-info">
-        <span class="project-tag">Graphic Design</span>
-        <h3>Project Two — Client / Company Name</h3>
-        <p>Same pattern: state the brief in one line, then the outcome. Numbers help here if you have them — "increased signups by 30%" beats "made it look nicer."</p>
+        <h3>Pulse</h3>
+        <p class="project-sub">SaaS product landing page</p>
+        <p>A dev-tools startup needed a landing page that reads as credible to engineers, not salesy. Built a clean feature grid, a working pricing table, and a UI mockup that shows the product instead of describing it.</p>
         <ul class="project-meta">
-          <li>Role: Brand identity &amp; visual system</li>
-          <li>Deliverables: Logo, color system, guidelines</li>
+          <li>Design &amp; front-end build</li>
+          <li>HTML, CSS, JavaScript</li>
         </ul>
-        <a href="#" class="project-link">View case study →</a>
+        <a href="saas/" class="project-link">View live site <span class="arrow">→</span></a>
       </div>
     </article>
 
     <article class="project">
+      <span class="project-index">03</span>
       <div class="project-media">
-        <img src="https://placehold.co/900x650/14161A/F2EFE9?text=Project+Three" alt="Project three preview">
+        <img src="https://placehold.co/900x650/FBF8F3/6B7A5E?text=Maya+Lindqvist" alt="Maya Lindqvist coaching site preview">
+        <span class="media-tag">Web Design</span>
       </div>
       <div class="project-info">
-        <span class="project-tag">Web Development</span>
-        <h3>Project Three — Client / Company Name</h3>
-        <p>Describe the technical challenge here — a tricky integration, a performance fix, a custom feature nobody else could ship on their deadline.</p>
+        <h3>Maya Lindqvist</h3>
+        <p class="project-sub">Career coach site</p>
+        <p>A career coach needed a site that sold trust before it sold a service. Built an editorial, testimonial-driven layout with a clear three-step process so visitors know exactly what working together looks like.</p>
         <ul class="project-meta">
-          <li>Role: Full front-end build</li>
-          <li>Stack: React, Tailwind, API integration</li>
+          <li>Design &amp; front-end build</li>
+          <li>HTML, CSS, JavaScript</li>
         </ul>
-        <a href="#" class="project-link">View live site →</a>
+        <a href="personal-brand/" class="project-link">View live site <span class="arrow">→</span></a>
       </div>
     </article>
 
     <article class="project reverse">
+      <span class="project-index">04</span>
       <div class="project-media">
-        <img src="https://placehold.co/900x650/14161A/F2EFE9?text=Project+Four" alt="Project four preview">
+        <img src="https://placehold.co/900x650/EFEFEA/1A1A1A?text=Fielder" alt="Fielder e-commerce product page preview">
+        <span class="media-tag">Web Development</span>
       </div>
       <div class="project-info">
-        <span class="project-tag">Web Design</span>
-        <h3>Project Four — Client / Company Name</h3>
-        <p>What made this one different? Maybe it was a fast turnaround, a difficult stakeholder, or a totally new industry you had to learn quickly.</p>
+        <h3>Fielder</h3>
+        <p class="project-sub">E-commerce product page</p>
+        <p>A backpack brand needed a single product page that could convert on its own. Built a working gallery, live color and size selectors, and a details section that answers objections before checkout.</p>
         <ul class="project-meta">
-          <li>Role: UX &amp; visual design</li>
-          <li>Tools: Figma, Webflow</li>
+          <li>Full front-end build</li>
+          <li>HTML, CSS, JavaScript</li>
         </ul>
-        <a href="#" class="project-link">View live site →</a>
+        <a href="ecommerce/" class="project-link">View live site <span class="arrow">→</span></a>
       </div>
     </article>
 
     <article class="project">
+      <span class="project-index">05</span>
       <div class="project-media">
-        <img src="https://placehold.co/900x650/14161A/F2EFE9?text=Project+Five" alt="Project five preview">
+        <img src="https://placehold.co/900x650/0B0C10/FF4D6D?text=Signal%2F26" alt="Signal 26 conference site preview">
+        <span class="media-tag">Web Design + Dev</span>
       </div>
       <div class="project-info">
-        <span class="project-tag">Graphic Design + Dev</span>
-        <h3>Project Five — Client / Company Name</h3>
-        <p>Close strong. If this is your best or most recent work, say why the client came back, or what specifically they praised.</p>
+        <h3>Signal/26</h3>
+        <p class="project-sub">Conference landing page</p>
+        <p>A tech conference needed urgency built into the page itself. Built a live countdown timer, a speaker grid, and a tiered ticket section designed to push early-bird signups.</p>
         <ul class="project-meta">
-          <li>Role: End-to-end design &amp; build</li>
-          <li>Stack: Figma, HTML/CSS, JavaScript</li>
+          <li>Design &amp; front-end build</li>
+          <li>HTML, CSS, JavaScript</li>
         </ul>
-        <a href="#" class="project-link">View live site →</a>
+        <a href="event/" class="project-link">View live site <span class="arrow">→</span></a>
       </div>
     </article>
 
@@ -160,9 +180,9 @@
 <section class="process" id="process">
   <div class="section-head">
     <p class="eyebrow">How It Works</p>
-    <h2>No agency. No middleman. Just this.</h2>
+    <h2>No agency.<br>No middleman. Just this.</h2>
   </div>
-  <div class="process-grid">
+  <div class="process-line">
     <div class="process-step">
       <span class="step-mono">01</span>
       <h4>You tell me the problem</h4>
@@ -187,6 +207,7 @@
 </section>
 
 <section class="contact" id="contact">
+  <div class="contact-glow"></div>
   <p class="eyebrow">Get In Touch</p>
   <h2>Got a project in mind?<br>Let's talk about it.</h2>
   <a href="mailto:deanvasanth12@gmail.com" class="btn btn-primary btn-large">deanvasanth12@gmail.com</a>
@@ -208,7 +229,7 @@
 </section>
 
 <footer>
-  <span>© 2026 Your Name. Built by hand, not a template.</span>
+  <span>© 2026 Vasanth Kumar. Built by hand, not a template.</span>
 </footer>
 
 <script src="script.js"></script>
