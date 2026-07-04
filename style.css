@@ -350,6 +350,40 @@ section { padding: 120px 48px; }
   letter-spacing: -0.01em;
   margin-bottom: 8px;
 }
+.contact-methods {
+  margin-top: 32px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contact-method {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 28px;
+  border: 1px solid rgba(242,239,233,0.15);
+  border-radius: 12px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.contact-method:hover {
+  border-color: var(--clay);
+  transform: translateY(-2px);
+}
+.contact-method-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--clay);
+}
+.contact-method-value {
+  font-size: 15px;
+  color: var(--paper);
+  font-weight: 500;
+}
+
 .contact-links {
   margin-top: 40px;
   display: flex;
