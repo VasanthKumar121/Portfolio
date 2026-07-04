@@ -18,4 +18,28 @@ document.addEventListener('DOMContentLoaded', () => {
       el.classList.add('in-view');
     });
   });
+
+  // Interactive hero card stack: spreads on hover, drifts with cursor position
+  const stack = document.getElementById('hero-stack');
+  if (stack && !prefersReducedMotion) {
+    const cards = stack.querySelectorAll('.stack-card');
+
+    stack.addEventListener('mouseenter', () => stack.classList.add('spread'));
+    stack.addEventListener('mouseleave', () => {
+      stack.classList.remove('spread');
+      cards.forEach(card => { card.style.setProperty('--mx', '0px'); card.style.setProperty('--my', '0px'); });
+    });
+    stack.addEventListener('mousemove', (e) => {
+      const rect = stack.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const dx = e.clientX - cx;
+      const dy = e.clientY - cy;
+      cards.forEach(card => {
+        const depth = parseFloat(card.dataset.depth) || 0.7;
+        card.style.setProperty('--mx', (dx * depth * 0.08) + 'px');
+        card.style.setProperty('--my', (dy * depth * 0.08) + 'px');
+      });
+    });
+  }
 });
