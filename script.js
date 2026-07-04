@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Reveal hero immediately on load rather than waiting for scroll
   requestAnimationFrame(() => {
-    document.querySelectorAll('.hero.reveal, .hero-frame.reveal-img').forEach(el => {
+    document.querySelectorAll('.hero.reveal, .hero-stack.reveal-img').forEach(el => {
       el.classList.add('in-view');
     });
   });
