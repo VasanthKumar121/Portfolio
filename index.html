@@ -7,235 +7,150 @@
 <meta name="description" content="Freelance web design, web development, and graphic design portfolio.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="grain"></div>
-<div class="glow glow-1"></div>
-<div class="glow glow-2"></div>
-<div class="glow glow-3"></div>
-
 <header class="topbar">
-  <div class="nav-pill">
-    <span class="mark">VK<span class="mark-dot">.</span></span>
-    <nav>
-      <a href="#work">Work</a>
-      <a href="#process">Process</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a href="#contact" class="nav-cta">Let's talk</a>
-  </div>
+  <span class="mark">Vasanth Kumar</span>
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="#contact" class="nav-cta">Contact</a>
 </header>
 
-<section class="hero" id="hero-spotlight">
-  <div class="spotlight"></div>
-  <div class="hero-half hero-design">
-    <div class="grid-overlay"></div>
-    <div class="swatch swatch-1"></div>
-    <div class="swatch swatch-2"></div>
-    <div class="swatch swatch-3"></div>
-    <span class="half-label">DESIGN</span>
+<section class="hero reveal">
+  <p class="eyebrow">Freelance Designer &amp; Developer</p>
+  <h1>Designed with care.<br>Built to last.</h1>
+  <p class="hero-sub">One person, two disciplines. What you approve is exactly what ships — no handoff, no drift.</p>
+  <div class="hero-actions">
+    <a href="#work" class="btn btn-primary">See the work</a>
+    <a href="#contact" class="btn-link">Start a project <span class="chev">›</span></a>
   </div>
-  <div class="hero-half hero-dev">
-    <div class="scanlines"></div>
-    <pre class="code-snippet"><code>&gt; init_project()
-  loading canvas...
-  loading logic...
-  status: <span class="ok">ready</span></code></pre>
-    <span class="half-label">DEVELOP</span>
-  </div>
-
-  <div class="hero-content">
-    <div class="hero-glass">
-      <p class="eyebrow">Freelance Designer &amp; Developer</p>
-      <h1>I design it.<br>I build it.<br><span class="gradient-text">It ships.</span></h1>
-      <p class="hero-sub">One person, two disciplines — no handoff between the mockup and the live site. What you approve is what your users touch.</p>
-      <div class="hero-actions">
-        <a href="#work" class="btn btn-primary">See the work</a>
-        <a href="#contact" class="btn btn-ghost">Start a project</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="float-chip float-chip-1">
-    <span class="chip-num">05</span>
-    <span class="chip-label">Live projects shipped</span>
-  </div>
-
-  <div class="scroll-cue">
-    <span>Scroll</span>
-    <div class="scroll-line"></div>
+  <div class="hero-frame reveal-img">
+    <div class="frame-bar"><span></span><span></span><span></span></div>
+    <img src="https://placehold.co/1400x820/F5F5F7/1D1D1F?text=Your+work%2C+shown+beautifully" alt="Portfolio preview mockup">
   </div>
 </section>
 
-<div class="ticker">
-  <div class="ticker-track">
-    <span>sketching layout</span><span class="dot-sep">✦</span>
-    <span>writing components</span><span class="dot-sep">✦</span>
-    <span>shipping pixels</span><span class="dot-sep">✦</span>
-    <span>testing on mobile</span><span class="dot-sep">✦</span>
-    <span>fixing the one bug</span><span class="dot-sep">✦</span>
-    <span>sketching layout</span><span class="dot-sep">✦</span>
-    <span>writing components</span><span class="dot-sep">✦</span>
-    <span>shipping pixels</span><span class="dot-sep">✦</span>
-    <span>testing on mobile</span><span class="dot-sep">✦</span>
-    <span>fixing the one bug</span><span class="dot-sep">✦</span>
+<section class="intro-band light">
+  <h2 class="reveal">Five briefs.<br>Five different worlds, <span class="accent">handled with the same care.</span></h2>
+</section>
+
+<section class="showcase dark" id="work">
+  <div class="showcase-item reveal">
+    <span class="showcase-eyebrow">01 — Restaurant</span>
+    <h3>Ember &amp; Oak</h3>
+    <p>A wood-fired restaurant needed a site as warm and deliberate as their kitchen. A hand-set menu, moody photography, one clear path to a reservation.</p>
+    <a href="restaurant/" class="btn-link light-link">View live site <span class="chev">›</span></a>
   </div>
-</div>
-
-<section class="work" id="work">
-  <div class="section-head">
-    <p class="eyebrow">Selected Work</p>
-    <h2>Five briefs.<br>Five different worlds.</h2>
-  </div>
-
-  <div class="project-list">
-
-    <article class="project">
-      <span class="project-index">01</span>
-      <div class="project-media tilt-card">
-        <img src="https://placehold.co/900x650/2A1810/E8D5B5?text=Ember+%26+Oak" alt="Ember and Oak restaurant site preview">
-        <span class="media-tag">Web Design + Dev</span>
-      </div>
-      <div class="project-info">
-        <h3>Ember &amp; Oak</h3>
-        <p class="project-sub">Restaurant landing page</p>
-        <p>A wood-fired restaurant needed a site as warm and deliberate as their kitchen. Built a single-page site with a hand-set menu, moody photography layout, and a direct reservation flow.</p>
-        <ul class="project-meta">
-          <li>Design &amp; front-end build</li>
-          <li>HTML, CSS, JavaScript</li>
-        </ul>
-        <a href="restaurant/" class="project-link">View live site <span class="arrow">→</span></a>
-      </div>
-    </article>
-
-    <article class="project reverse">
-      <span class="project-index">02</span>
-      <div class="project-media tilt-card">
-        <img src="https://placehold.co/900x650/FAFAF9/4F46E5?text=Pulse" alt="Pulse SaaS landing page preview">
-        <span class="media-tag">Web Design + Dev</span>
-      </div>
-      <div class="project-info">
-        <h3>Pulse</h3>
-        <p class="project-sub">SaaS product landing page</p>
-        <p>A dev-tools startup needed a landing page that reads as credible to engineers, not salesy. Built a clean feature grid, a working pricing table, and a UI mockup that shows the product instead of describing it.</p>
-        <ul class="project-meta">
-          <li>Design &amp; front-end build</li>
-          <li>HTML, CSS, JavaScript</li>
-        </ul>
-        <a href="saas/" class="project-link">View live site <span class="arrow">→</span></a>
-      </div>
-    </article>
-
-    <article class="project">
-      <span class="project-index">03</span>
-      <div class="project-media tilt-card">
-        <img src="https://placehold.co/900x650/FBF8F3/6B7A5E?text=Maya+Lindqvist" alt="Maya Lindqvist coaching site preview">
-        <span class="media-tag">Web Design</span>
-      </div>
-      <div class="project-info">
-        <h3>Maya Lindqvist</h3>
-        <p class="project-sub">Career coach site</p>
-        <p>A career coach needed a site that sold trust before it sold a service. Built an editorial, testimonial-driven layout with a clear three-step process so visitors know exactly what working together looks like.</p>
-        <ul class="project-meta">
-          <li>Design &amp; front-end build</li>
-          <li>HTML, CSS, JavaScript</li>
-        </ul>
-        <a href="personal-brand/" class="project-link">View live site <span class="arrow">→</span></a>
-      </div>
-    </article>
-
-    <article class="project reverse">
-      <span class="project-index">04</span>
-      <div class="project-media tilt-card">
-        <img src="https://placehold.co/900x650/EFEFEA/1A1A1A?text=Fielder" alt="Fielder e-commerce product page preview">
-        <span class="media-tag">Web Development</span>
-      </div>
-      <div class="project-info">
-        <h3>Fielder</h3>
-        <p class="project-sub">E-commerce product page</p>
-        <p>A backpack brand needed a single product page that could convert on its own. Built a working gallery, live color and size selectors, and a details section that answers objections before checkout.</p>
-        <ul class="project-meta">
-          <li>Full front-end build</li>
-          <li>HTML, CSS, JavaScript</li>
-        </ul>
-        <a href="ecommerce/" class="project-link">View live site <span class="arrow">→</span></a>
-      </div>
-    </article>
-
-    <article class="project">
-      <span class="project-index">05</span>
-      <div class="project-media tilt-card">
-        <img src="https://placehold.co/900x650/0B0C10/FF4D6D?text=Signal%2F26" alt="Signal 26 conference site preview">
-        <span class="media-tag">Web Design + Dev</span>
-      </div>
-      <div class="project-info">
-        <h3>Signal/26</h3>
-        <p class="project-sub">Conference landing page</p>
-        <p>A tech conference needed urgency built into the page itself. Built a live countdown timer, a speaker grid, and a tiered ticket section designed to push early-bird signups.</p>
-        <ul class="project-meta">
-          <li>Design &amp; front-end build</li>
-          <li>HTML, CSS, JavaScript</li>
-        </ul>
-        <a href="event/" class="project-link">View live site <span class="arrow">→</span></a>
-      </div>
-    </article>
-
+  <div class="showcase-frame reveal-img">
+    <div class="frame-bar"><span></span><span></span><span></span></div>
+    <img src="https://placehold.co/1400x900/2A1810/E8D5B5?text=Ember+%26+Oak" alt="Ember and Oak preview">
   </div>
 </section>
 
-<section class="process" id="process">
-  <div class="section-head">
-    <p class="eyebrow">How It Works</p>
-    <h2>No agency.<br>No middleman. Just this.</h2>
+<section class="showcase light">
+  <div class="showcase-item reveal">
+    <span class="showcase-eyebrow">02 — SaaS</span>
+    <h3>Pulse</h3>
+    <p>A dev-tools startup needed a landing page that reads as credible to engineers. A clean feature grid, a working pricing table, a UI mockup that shows rather than tells.</p>
+    <a href="saas/" class="btn-link">View live site <span class="chev">›</span></a>
   </div>
+  <div class="showcase-frame reveal-img">
+    <div class="frame-bar"><span></span><span></span><span></span></div>
+    <img src="https://placehold.co/1400x900/FAFAF9/4F46E5?text=Pulse" alt="Pulse preview">
+  </div>
+</section>
+
+<section class="showcase dark">
+  <div class="showcase-item reveal">
+    <span class="showcase-eyebrow">03 — Coaching</span>
+    <h3>Maya Lindqvist</h3>
+    <p>A career coach needed a site that sold trust before it sold a service. An editorial layout, testimonials that read like proof, a clear three-step process.</p>
+    <a href="personal-brand/" class="btn-link light-link">View live site <span class="chev">›</span></a>
+  </div>
+  <div class="showcase-frame reveal-img">
+    <div class="frame-bar"><span></span><span></span><span></span></div>
+    <img src="https://placehold.co/1400x900/FBF8F3/6B7A5E?text=Maya+Lindqvist" alt="Maya Lindqvist preview">
+  </div>
+</section>
+
+<section class="showcase light">
+  <div class="showcase-item reveal">
+    <span class="showcase-eyebrow">04 — E-commerce</span>
+    <h3>Fielder</h3>
+    <p>A backpack brand needed a single product page that could convert on its own. A working gallery, live color and size selection, no gimmicks.</p>
+    <a href="ecommerce/" class="btn-link">View live site <span class="chev">›</span></a>
+  </div>
+  <div class="showcase-frame reveal-img">
+    <div class="frame-bar"><span></span><span></span><span></span></div>
+    <img src="https://placehold.co/1400x900/EFEFEA/1A1A1A?text=Fielder" alt="Fielder preview">
+  </div>
+</section>
+
+<section class="showcase dark">
+  <div class="showcase-item reveal">
+    <span class="showcase-eyebrow">05 — Event</span>
+    <h3>Signal/26</h3>
+    <p>A tech conference needed urgency built into the page itself. A live countdown, a speaker grid, a ticket tier designed to push early signups.</p>
+    <a href="event/" class="btn-link light-link">View live site <span class="chev">›</span></a>
+  </div>
+  <div class="showcase-frame reveal-img">
+    <div class="frame-bar"><span></span><span></span><span></span></div>
+    <img src="https://placehold.co/1400x900/0B0C10/FF4D6D?text=Signal%2F26" alt="Signal 26 preview">
+  </div>
+</section>
+
+<section class="process light" id="process">
+  <p class="eyebrow eyebrow-dark reveal">How It Works</p>
+  <h2 class="reveal">No agency.<br>No middleman. Just this.</h2>
   <div class="process-grid">
-    <div class="process-card">
-      <span class="step-mono">01</span>
+    <div class="process-step reveal">
+      <span class="step-num">01</span>
       <h4>You tell me the problem</h4>
       <p>Not "make it pretty" — what you're actually trying to fix or launch, and by when.</p>
     </div>
-    <div class="process-card">
-      <span class="step-mono">02</span>
+    <div class="process-step reveal">
+      <span class="step-num">02</span>
       <h4>I design it</h4>
       <p>A real mockup, in your brand, that you can react to — not a mood board.</p>
     </div>
-    <div class="process-card">
-      <span class="step-mono">03</span>
+    <div class="process-step reveal">
+      <span class="step-num">03</span>
       <h4>I build it</h4>
-      <p>The approved design becomes a working site. No redesign at handoff, because there is no handoff.</p>
+      <p>The approved design becomes a working site. No redesign at handoff.</p>
     </div>
-    <div class="process-card">
-      <span class="step-mono">04</span>
+    <div class="process-step reveal">
+      <span class="step-num">04</span>
       <h4>You launch</h4>
       <p>Tested on mobile and desktop, fast to load, ready for real users.</p>
     </div>
   </div>
 </section>
 
-<section class="contact" id="contact">
-  <div class="contact-glow"></div>
-  <div class="contact-card">
-    <p class="eyebrow">Get In Touch</p>
-    <h2>Got a project in mind?<br>Let's talk about it.</h2>
-    <a href="mailto:deanvasanth12@gmail.com" class="btn btn-primary btn-large">deanvasanth12@gmail.com</a>
-    <div class="contact-methods">
-      <a href="tel:+919080552248" class="contact-method">
-        <span class="contact-method-label">Call</span>
-        <span class="contact-method-value">+91 90805 52248</span>
-      </a>
-      <a href="https://wa.me/919080552248" class="contact-method" target="_blank" rel="noopener">
-        <span class="contact-method-label">WhatsApp</span>
-        <span class="contact-method-value">+91 90805 52248</span>
-      </a>
-    </div>
+<section class="contact dark" id="contact">
+  <p class="eyebrow reveal">Get In Touch</p>
+  <h2 class="reveal">Got a project in mind?<br>Let's talk about it.</h2>
+  <a href="mailto:deanvasanth12@gmail.com" class="btn btn-primary btn-large reveal">deanvasanth12@gmail.com</a>
+  <div class="contact-methods reveal">
+    <a href="tel:+919080552248" class="contact-method">
+      <span class="contact-method-label">Call</span>
+      <span class="contact-method-value">+91 90805 52248</span>
+    </a>
+    <a href="https://wa.me/919080552248" class="contact-method" target="_blank" rel="noopener">
+      <span class="contact-method-label">WhatsApp</span>
+      <span class="contact-method-value">+91 90805 52248</span>
+    </a>
   </div>
 </section>
 
-<footer>
-  <span>© 2026 Vasanth Kumar. Built by hand, not a template.</span>
+<footer class="light">
+  <span>© 2026 Vasanth Kumar</span>
+  <span>Built by hand, not a template.</span>
 </footer>
 
 <script src="script.js"></script>
