@@ -2,7 +2,7 @@
 
 A one-page portfolio site — free to host on GitHub Pages.
 
-## Before you push: edit these things"
+## Before you push: edit these things'
 
 1. Open `index.html` and replace:
    - `Your Name` → your actual name (appears in `<title>`, footer, hero)
