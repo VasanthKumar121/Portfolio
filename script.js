@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const targets = document.querySelectorAll('.reveal, .reveal-img');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  const targets = document.querySelectorAll('.reveal, .reveal-img');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
@@ -9,37 +10,35 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }, { threshold: 0.15 });
-
   targets.forEach(el => observer.observe(el));
 
   // Reveal hero immediately on load rather than waiting for scroll
   requestAnimationFrame(() => {
-    document.querySelectorAll('.hero.reveal, .hero-stack.reveal-img').forEach(el => {
+    document.querySelectorAll('.hero.reveal').forEach(el => {
       el.classList.add('in-view');
     });
   });
 
-  // Interactive hero card stack: spreads on hover, drifts with cursor position
-  const stack = document.getElementById('hero-stack');
-  if (stack && !prefersReducedMotion) {
-    const cards = stack.querySelectorAll('.stack-card');
+  // Hero image slider
+  const slides = document.querySelectorAll('#hero-slider .slide');
+  const dots = document.querySelectorAll('#hero-slider .dot');
+  let currentSlide = 0;
 
-    stack.addEventListener('mouseenter', () => stack.classList.add('spread'));
-    stack.addEventListener('mouseleave', () => {
-      stack.classList.remove('spread');
-      cards.forEach(card => { card.style.setProperty('--mx', '0px'); card.style.setProperty('--my', '0px'); });
-    });
-    stack.addEventListener('mousemove', (e) => {
-      const rect = stack.getBoundingClientRect();
-      const cx = rect.left + rect.width / 2;
-      const cy = rect.top + rect.height / 2;
-      const dx = e.clientX - cx;
-      const dy = e.clientY - cy;
-      cards.forEach(card => {
-        const depth = parseFloat(card.dataset.depth) || 0.7;
-        card.style.setProperty('--mx', (dx * depth * 0.08) + 'px');
-        card.style.setProperty('--my', (dy * depth * 0.08) + 'px');
-      });
-    });
+  function showSlide(index) {
+    slides.forEach(s => s.classList.remove('active'));
+    dots.forEach(d => d.classList.remove('active'));
+    slides[index].classList.add('active');
+    dots[index].classList.add('active');
+    currentSlide = index;
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => showSlide(parseInt(dot.dataset.slide)));
+  });
+
+  if (slides.length > 0 && !prefersReducedMotion) {
+    setInterval(() => {
+      showSlide((currentSlide + 1) % slides.length);
+    }, 4500);
   }
 });
