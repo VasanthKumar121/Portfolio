@@ -41,4 +41,21 @@ document.addEventListener('DOMContentLoaded', () => {
       showSlide((currentSlide + 1) % slides.length);
     }, 4500);
   }
+
+  // 3D tilt on project showcase frames
+  if (!prefersReducedMotion) {
+    document.querySelectorAll('.tilt-frame').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const rotateX = ((y / rect.height) - 0.5) * -6;
+        const rotateY = ((x / rect.width) - 0.5) * 6;
+        card.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.015)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1200px) rotateX(0) rotateY(0) scale(1)';
+      });
+    });
+  }
 });

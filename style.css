@@ -75,11 +75,33 @@ img { display: block; width: 100%; }
 .btn-link:hover .chev { transform: translateX(2px); }
 
 .showcase-frame {
-  border-radius: 20px; overflow: hidden;
+  border-radius: 20px;
   box-shadow: 0 40px 100px rgba(0,0,0,0.16);
+  margin-bottom: 0;
+  position: relative;
+  overflow: visible;
+}
+.frame-inner {
+  border-radius: 20px; overflow: hidden;
   border: 1px solid rgba(0,0,0,0.06);
   background: var(--offwhite);
-  margin-bottom: 0;
+}
+.tilt-frame {
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out, box-shadow 0.3s;
+  will-change: transform;
+}
+.tilt-frame:hover {
+  box-shadow: 0 50px 120px rgba(0,113,227,0.25);
+}
+.showcase.dark .tilt-frame:hover { box-shadow: 0 50px 120px rgba(255,255,255,0.15); }
+.frame-num {
+  position: absolute; top: -18px; right: 28px; z-index: 3;
+  width: 52px; height: 52px; border-radius: 16px;
+  background: linear-gradient(135deg, var(--blue), #5CB0FF);
+  color: #fff; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 12px 28px rgba(0,113,227,0.4);
 }
 .frame-bar { display: flex; gap: 7px; padding: 14px 18px; background: #E8E8ED; }
 .frame-bar span { width: 11px; height: 11px; border-radius: 50%; background: #C6C6CB; }
